@@ -56,26 +56,26 @@ ul {
 }
 .container {
   /* Basic styles */
-  min-width: 320px;
+  min-width: 296px;
   max-width: 396px;
   padding: 0 16px;
   margin: 0 auto;
   /* width: 1158px; */
-
   /* padding: 96px 16px;*/
-
   /* margin: 0 auto; */
 }
 /* Tablet screen */
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 584px;
   }
 }
 /* Desktop screen */
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding: 0 15px;
+    flex-wrap: nowrap;
   }
 }
 .header-div-nav {
@@ -333,7 +333,8 @@ body {
 /* //Section 3 */
 /* Section 4 */
 .team {
-  padding: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   /* padding-top: 120px;
   padding-bottom: 120px; */
   background: var(--background-light-color);
