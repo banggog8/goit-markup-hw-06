@@ -34,6 +34,8 @@ html {
 }
 img {
   display: block;
+  /* width: 100%;
+  height: auto; */
 }
 h1,
 h2,
@@ -57,7 +59,7 @@ ul {
 .container {
   /* Basic styles */
   min-width: 296px;
-  max-width: 396px;
+  max-width: 296px;
   padding: 0 16px;
   margin: 0 auto;
   /* width: 1158px; */
@@ -339,6 +341,12 @@ body {
   padding-bottom: 120px; */
   background: var(--background-light-color);
 }
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .team-container {
+    max-width: 296px;
+  }
+} 
+  
 @media only screen and (min-width: 768px) {
   .team {
     padding: 96px 0;
@@ -368,12 +376,16 @@ body {
   column-gap:var(--indent-vertical);
   /* padding-left: 0; */
 }
-.ul-team{
+@media only screen and (min-width: 1158px) {
+  .ul-team {
+     --items: 3;
+  }
+}{
 
 }
 .team-items {
   /* padding: 65px; */
-  flex-basis: calc((100% - var(--indent-vertical))* (var(--items) - 1) / var(--items));
+  /* flex-basis: calc((100% - var(--indent-vertical))* (var(--items) - 1) / var(--items)); */
   gap: 24px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--fff);
@@ -448,6 +460,7 @@ body {
 }
 .customers-clients {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 .customer-items {
