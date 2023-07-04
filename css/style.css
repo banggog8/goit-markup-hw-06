@@ -376,7 +376,6 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--background-color);
-  width: calc((100% - 24px) / 2);
 }
 .ul-team {
   display: flex;
