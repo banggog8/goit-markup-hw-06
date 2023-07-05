@@ -84,7 +84,6 @@ ul {
   } */
   .customers-items{
     width: calc((100% - 48px) / 3);
-    
   }
   .ul-team{
     width: calc((100% - 24px) / 2);
