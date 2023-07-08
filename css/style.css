@@ -62,6 +62,7 @@ ul {
   max-width: 428px;
   padding: 0 16px;
   margin: 0 auto;
+  background-color: red;
   /* max-width: 296px; */
   /* width: 1158px; */
   /* padding: 96px 16px;*/
@@ -77,12 +78,12 @@ ul {
 /* Tablet screen */
 @media only screen and (min-width: 768px) {
   .clients-container,
-  .team-container {
-    max-width: 584px;
+  .team-container,
+  .features-container {
+    max-width: 584px; 
+    background-color: green;
   }
- 
-  
-  .customers-items{
+ .customers-items{
     width: calc((100% - 48px) / 3);
   }
   .ul-team{
@@ -94,10 +95,13 @@ ul {
 }
 /* Desktop screen */
 @media only screen and (min-width: 1158px) {
-  .container {
+  .clients-container,
+  .team-container,
+  .features-container{
     max-width: 1158px;
     padding: 0 15px;
     flex-wrap: nowrap;
+    background-color: blue;
   }
   .ul-team{
     width: calc((100% - 120px) / 6);
