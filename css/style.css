@@ -69,21 +69,21 @@ ul {
 }
 .container {
   /* Basic styles */
-  min-width: 296px;
-  max-width: 428px;
+  min-width: 320px;
+  max-width: 396px;
   padding: 0 16px;
   margin: 0 auto;
-  /* max-width: 296px; */
-  /* width: 1158px; */
-  /* padding: 96px 16px;*/
-  /* margin: 0 auto; */
 }
 /* Tablet screen */
 @media only screen and (min-width: 768px) {
+  /* .container{
+    max-width: 736px; 
+  } */
   .clients-container,
   .team-container,
   .features-container {
-    max-width: 584px; 
+    max-width: 736px; 
+  
   }
   .customer-items{
     width: calc((100% - 35px) / 3);
@@ -110,12 +110,18 @@ ul {
   .team-items{
     width: calc((100% - 72px) / 4);
   }
+  .features-item{
+    width: 264px;
+   }
   .features-list{
     gap: 120px 24px;
    }
-   .features-item{
-    width: 264px;
-   }
+   /* Look at main-actions element */
+
+   /* .main-actions{
+    display: block;
+   } */
+   
 }
 .logo-navigation{
   display: flex;
@@ -316,6 +322,7 @@ button {
   background: var(--fff);
 }
 .main-actions {
+  /* display: none;*/
   margin-bottom: 72px;
   font-family: var(--primary-font);
   font-style: normal;
@@ -347,7 +354,7 @@ button {
   padding-bottom: 120px; */
   background: var(--background-light-color);
 }
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .team-container {
   
   }
@@ -362,7 +369,7 @@ button {
   .team {
     padding: 120px 0;
   }
-}
+} */
 .our-team {
   margin-bottom: 72px;
   /* font-style: normal; */
@@ -450,10 +457,17 @@ button {
 
 /* // Social items */
 .customers {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 0;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+}
+@media only screen and (min-width: 1158px) {
+  .customers {
+    padding: 120px 0;
+  }
 }
 .customers-title {
+  
   margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
@@ -468,10 +482,32 @@ button {
   flex-wrap: wrap;
   gap: 72px 16px;
 }
+@media only screen and (min-width: 768px) {
+  .customers-clients {
+    gap: 72px 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .customers-clients {
+    flex-wrap: nowrap;
+  }
+}
 .customer-items {
   width: calc((100% - 16px) / 2);
   height: 88px;
+} 
+@media only screen and (min-width: 768px) {
+  .customer-items {
+    width: calc((100% - 24px) / 4);
+  }
+} 
+@media only screen and (min-width: 1158px) {
+  .customer-items {
+    width: calc((100% - 24px) / 5);
+  }
 }
+
+
 .customer-link {
   display: flex;
   align-items: center;
