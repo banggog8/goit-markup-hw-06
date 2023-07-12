@@ -108,6 +108,7 @@ ul {
   .section-features {
     padding: 120px 0;
   }
+
   .features-container{
     max-width: 1158px;
   }
@@ -247,6 +248,11 @@ button {
 .section-features {
   padding: 96px 0;
 }
+@media only screen and (min-width: 1158px) {
+  .section-features {
+    padding: 120px;
+  }
+}
 .features-list {
   display: flex;
   flex-wrap: wrap;
@@ -290,6 +296,8 @@ button {
 @media only screen and (min-width: 1158px) {
   .features-cards {
     display: flex;
+    width: 264px;
+    height: 112px;
   }
 }
 .main-features {
@@ -354,11 +362,19 @@ button {
 /* //Section 2 */
 /* Section 3 */
 .actions {
+  display: none;
   padding-bottom: 120px;
   background: var(--fff);
 }
+@media only screen and (min-width: 1158px) {
+  .actions  {
+    display: flex;
+  }
+}
+.actions-container{
+
+}
 .main-actions {
-  /* display: none;*/
   margin-bottom: 72px;
   font-family: var(--primary-font);
   font-style: normal;
