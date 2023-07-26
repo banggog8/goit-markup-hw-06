@@ -63,9 +63,8 @@ ul {
 }
 .logo-container {
   display: flex;
-  /* display: none; */
   justify-content: space-between;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   padding: 24px 0px 24px 0px;
 }
@@ -138,6 +137,7 @@ button {
 }
 .web-studio-logo {
   display: inline-block;
+  margin-top: 13px;
   margin-right: 76px;
   font-family: var(--primary-font);
   font-weight: 800;
@@ -1025,8 +1025,10 @@ height: 580px;
   align-items: center;
   justify-content: center;
 
+  
+  margin: 0;
+  margin-top: -30px;
   margin-left: auto;
-  /* margin: 0; */
   padding: 0;
   background-color: transparent;
   cursor: pointer;
