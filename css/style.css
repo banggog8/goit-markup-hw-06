@@ -68,6 +68,11 @@ ul {
   align-items: center;
   padding: 24px 0px 24px 0px;
 }
+@media only screen and (min-width: 768px) {
+  .logo-container {
+    justify-content: center;
+  }
+}
 
 .container {
   /* Basic styles */
@@ -147,6 +152,11 @@ button {
   text-transform: uppercase;
   color: var(--button-color);
 }
+@media only screen and (min-width: 768px) {
+  .web-studio-logo {
+    /* margin-right: auto; */
+  }
+}
 /* .par {
   max-width: 264px;
 } */
@@ -164,6 +174,7 @@ button {
 @media only screen and (min-width: 768px) {
   .main-menu {
     display: flex;
+    margin-right: 16px;
   }
 }
 .menu {
@@ -192,13 +203,39 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.main-contacts{
+display: none;
+list-style: none;
+margin-left: 121px;
+
+}
+@media only screen and (min-width: 768px) {
+  .main-contacts {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1157px) {
+  .main-contacts {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .contacts-info {
+  margin-top: 16px;
   color: var(--p_text);
   transition: color var(--transition);
 }
 .contacts-info:hover,
 .contacts-info:focus {
   color: var(--hover-link);
+}
+.tel-info{
+  margin-top: 12px;
+  color:  #434455;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
 }
 
 
@@ -628,7 +665,7 @@ height: 580px;
 }
 .socials-footer {
   display: flex;
-  gap: 16px;
+  gap: 40px;
 }
 .socials-footer-link {
   display: flex;
@@ -1050,12 +1087,14 @@ height: 580px;
 
 .menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
+  padding: 40px;
+  background-color: #fff;
   z-index: 999;
 
   transform: translateX(100%);
@@ -1070,12 +1109,44 @@ height: 580px;
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  margin-top: 24px;
+  margin-right: 24px;
 }
 
+.mobile-menu{
+  margin-bottom: auto;
+}
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: #fff;
-  text-decoration: none;
+  margin-top: 32px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02;
+  text-transform: capitalize;
+  color: #2E2F42;
+}
+.mobile-contacts{
+  /* margin-top: 284px; */
+  padding-bottom: 48px;
+ 
+}
+.number-nav {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; 
+  letter-spacing: 0.02;
+  text-transform: capitalize;
+  color: #4D5AE5;
+}
+.email-nav{
+  margin-top: 40px;
+  color: #434455;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
 }
