@@ -43,10 +43,14 @@ body {
   background-color: var(--hover-link);
   border-radius: 2px;
 }
+/* Responsive content picture */
 img {
   display: block;
-  /* width: 100%; */
+  max-width: 100%;
   height: auto;
+
+  /* object-fit: cover;
+  object-position: center; */
 }
 h1,
 h2,
@@ -217,11 +221,14 @@ button {
 display: none;
 list-style: none;
 margin-left: 121px;
+margin: 24px 0;
+
 
 }
 @media only screen and (min-width: 768px) {
   .main-contacts {
     display: block;
+    margin-left: 122px;
   }
 }
 @media only screen and (min-width: 1157px) {
@@ -230,6 +237,7 @@ margin-left: 121px;
     flex-direction: row;
     align-items: baseline;
     gap: 40px;
+    margin-left: 332px;
   }
 }
 .contacts-info {
@@ -265,19 +273,60 @@ margin-left: 121px;
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/background-img/people-office1.jpg);
+    url(/images/hero/img-1_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .main-hero {
-height: 580px;
+  height: 580px;
+  }
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main-hero
+  {
+   background-image: url(/images/hero/img-2_mob@2x.jpg);
+  }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 429px) {
   .main-hero {
-    
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/img-1_tab@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .main-hero 
+    {
+      background-image: url(../images/hero/img-2_tab@2x.jpg);
+    }
   }
 } 
+@media only screen and (min-width: 769px) {
+  .main-hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/img-1_desk@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .main-hero 
+    {
+      background-image: url(../images/hero/img-2_desk@2x.jpg);
+    }
+  }
+} 
+
+/* @media only screen and (min-width: 1158px) {
+  .main-hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/img-1_desk@1x.jpg);
+  }
+}  */
 .hero-container{
    
 }
