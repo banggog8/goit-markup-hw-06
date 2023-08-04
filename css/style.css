@@ -800,25 +800,18 @@ margin: 24px 0;
 }
 @media only screen and (min-width: 768px) {
   .subscribe {
-    
+    flex-direction: row;
   }
 }
 .subscribe-text {
   display: flex;
-  justify-content: center;
   font-weight: 500;
   margin-bottom: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--fff);
 }
-@media only screen and (min-width: 768px) {
-  .div-subscribe {
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-  }
-}
+
 
 
 .label-subscribe {
