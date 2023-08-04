@@ -773,9 +773,11 @@ margin: 24px 0;
   letter-spacing: 0.02em;
   color: var(--background-light-color);
 }
-.footer-social {
-  /* margin-right: 80px; */
-}
+@media only screen and (min-width: 1158px) {
+  .footer-social {
+      margin-right: 80px;
+  }
+} 
 .soc-media {
   margin-bottom: 16px;
   text-align: center;
@@ -812,7 +814,6 @@ margin: 24px 0;
 }
 @media only screen and (min-width: 768px) {
   .div-subscribe {
-    display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
