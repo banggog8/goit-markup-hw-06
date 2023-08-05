@@ -1,0 +1,18 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.link1{
+    text-decoration: none;
+}
+.btn{
+    width: 200px;
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: tomato;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
