@@ -33,15 +33,22 @@ body {
   background-color: var(--fff);
   color: var(--p_text);
 }
-.menu::after {
+.menu-studio::after,
+.menu-portfolio::after {
   width: 100%;
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -10px;
   height: 4px;
   background-color: var(--hover-link);
   border-radius: 2px;
+}
+@media only screen and (min-width: 1158px) {
+  .menu-studio::after,
+  .menu-portfolio::after {
+    bottom: 0px;
+  }
 }
 /* Responsive content picture */
 img {
@@ -67,13 +74,14 @@ ul {
 }
 .logo-container {
   display: flex;
+  height: 70px;
   justify-content: space-between;
-  /* justify-content: center; */
   align-items: center;
-  padding: 24px 0px 24px 0px;
+  padding: 15px 16px 35px 16px;
 }
 @media only screen and (min-width: 768px) {
   .logo-container {
+    height: 72px;
     justify-content: center;
   }
 }
@@ -103,9 +111,7 @@ ul {
   .customer-items{
     width: calc((100% - 35px) / 3);
   }
-  .team-items{
-    width: calc((100% - 24px) / 2);
-  }
+  
   .features-container{
     max-width: 736px;
   }
@@ -156,7 +162,7 @@ button {
 }
 .web-studio-logo {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-top: 13px;
   margin-right: 76px;
   font-family: var(--primary-font);
@@ -166,6 +172,11 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--button-color);
+}
+@media only screen and (min-width: 768px) {
+  .web-studio-logo {
+    justify-content: start;
+  }
 }
 .web-studio {
   color: var(--background-color);
@@ -220,7 +231,7 @@ margin: 24px 0;
 }
 @media only screen and (min-width: 768px) {
   .main-contacts {
-    display: block;
+    display: inline-block;
     margin-left: 122px;
   }
 }
@@ -234,7 +245,6 @@ margin: 24px 0;
   }
 }
 .contacts-info {
-  margin-top: 16px;
   color: var(--p_text);
   transition: color var(--transition);
   font-family: Roboto;
@@ -283,12 +293,21 @@ margin: 24px 0;
   background-size: cover;
 }
 .main-hero {
-  height: 580px;
+  padding:112px 0; 
+  }
+  @media only screen and (min-width: 1158px) {
+    .main-hero {
+      padding: 188px 0;
+    }
   }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .main-hero
   {
-   background-image: url(/images/hero/img-2_mob@2x.jpg);
+   background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ),
+  url(../images/hero/img-1_desk@1x.jpg); 
   }
 }
 @media only screen and (min-width: 429px) {
@@ -296,13 +315,15 @@ margin: 24px 0;
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    ),
+     ),
     url(../images/hero/img-1_tab@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .main-hero 
-    {
-      background-image: url(../images/hero/img-2_tab@2x.jpg);
+    {background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+       ), url(../images/hero/img-2_tab@2x.jpg);
     }
   }
 } 
@@ -311,18 +332,21 @@ margin: 24px 0;
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    ),
+     ),
     url(../images/hero/img-1_desk@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .main-hero 
     {
-      background-image: url(../images/hero/img-2_desk@2x.jpg);
+      background-image:linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+       ), url(../images/hero/img-2_desk@2x.jpg);
     }
   }
 } 
 
-/* @media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1158px) {
   .main-hero {
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -330,26 +354,27 @@ margin: 24px 0;
     ),
     url(../images/hero/img-1_desk@1x.jpg);
   }
-}  */
-.hero-container{
-   
-}
-@media only screen and (min-width: 1157px) {
-  .hero-container {
-    
-  }
-}
+} 
 .solutions {
   margin-left: auto;
   margin-right: auto;
   max-width: 496px;
   min-height: 100px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--fff);
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 768px) {
+  .solutions {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+  }
 }
 .order-btn {
   margin: 48px auto 0 auto;
@@ -738,6 +763,7 @@ margin: 24px 0;
 @media only screen and (min-width: 1158px) {
   .footer-container {
     width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -781,16 +807,9 @@ margin: 24px 0;
     margin-right: 24px;
   }
 }
-@media only screen and (min-width: 1158px) {
-  .footer-p {
-    margin-right: 120px;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .footer-social {
-      margin-right: 104px;
-  }
-} 
+/* .footer-social{
+  margin-bottom: 37px;
+} */
 .soc-media {
   margin-bottom: 16px;
   text-align: center;
@@ -799,6 +818,11 @@ margin: 24px 0;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--fff);
+}
+@media only screen and (min-width: 768px) {
+  .soc-media {
+    text-align: start;
+  }
 }
 .web-studio-footer {
   margin: 0;
@@ -818,19 +842,25 @@ margin: 24px 0;
 }
 @media only screen and (min-width: 1158px) {
   .subscribe {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 .subscribe-text {
   display: flex;
+  justify-content: center;
   font-weight: 500;
   margin-bottom: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--fff);
 }
+@media only screen and (min-width: 768px) {
+  .subscribe-text {
+    justify-content: start;
+  }
+}
 .email-input {
-  width: 264px;
+  width: 398px;
   height: 40px;
   border: 1px solid var(--fff);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -842,11 +872,17 @@ margin: 24px 0;
   color: var(--fff);
   padding-left: 16px;
 }
+@media only screen and (min-width: 768px) {
+  .email-input {
+    width: 264px;
+  }
+}
 .footer-submit-btn {
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   background: var(--button-color);
   border-radius: 4px;
@@ -1173,9 +1209,8 @@ margin: 24px 0;
   align-items: center;
   justify-content: center; 
   margin: 0;
-  margin-top: -55px;
-  margin-left: auto;
   padding: 0;
+  padding-top: 24px;
   background-color: transparent;
   cursor: pointer;
   border: none;
