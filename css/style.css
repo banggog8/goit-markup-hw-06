@@ -33,6 +33,47 @@ body {
   background-color: var(--fff);
   color: var(--p_text);
 }
+.menu-studio{
+  position: relative;
+  display: block;
+  padding: 24px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--hover-link);
+  transition: color var(--transition);
+}
+.menu-partfolio{
+  position: relative;
+  display: block;
+  padding: 24px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--background-color);
+  transition: color var(--transition);
+}
+.menu-contacts{
+  position: relative;
+  display: block;
+  padding: 24px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--background-color);
+  transition: color var(--transition);
+}
+.menu-studio:hover,
+.menu-studio:focus,
+.menu-partfolio:hover,
+.menu-partfolio:focus,
+.menu-contacts:hover,
+.menu-contacts:focus {
+  color: var(--hover-link);
+}
 .menu-studio::after,
 .menu-portfolio::after {
   width: 100%;
@@ -43,6 +84,7 @@ body {
   height: 4px;
   background-color: var(--hover-link);
   border-radius: 2px;
+  
 }
 @media only screen and (min-width: 1158px) {
   .menu-studio::after,
@@ -77,7 +119,6 @@ ul {
   height: 70px;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 16px 35px 16px;
 }
 @media only screen and (min-width: 768px) {
   .logo-container {
@@ -248,7 +289,8 @@ margin: 24px 0;
   color: var(--p_text);
   transition: color var(--transition);
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.16; 
   letter-spacing: 0.48px;
@@ -266,7 +308,8 @@ margin: 24px 0;
 .tel-info{
   margin-top: 12px;
   color:  #434455;
-  font-size: 12px;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.48px;
@@ -358,7 +401,7 @@ margin: 24px 0;
 .solutions {
   margin-left: auto;
   margin-right: auto;
-  max-width: 496px;
+  max-width: 320px;
   min-height: 100px;
   font-weight: 700;
   font-size: 36px;
@@ -764,6 +807,7 @@ margin: 24px 0;
   .footer-container {
     width: 100%;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -774,6 +818,7 @@ margin: 24px 0;
   display: flex;
   gap: 16px;
 }
+
 .socials-footer-link {
   display: flex;
   justify-content: center;
@@ -860,7 +905,7 @@ margin: 24px 0;
   }
 }
 .email-input {
-  width: 398px;
+  width: 100%;
   height: 40px;
   border: 1px solid var(--fff);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1210,11 +1255,9 @@ margin: 24px 0;
   justify-content: center; 
   margin: 0;
   padding: 0;
-  padding-top: 24px;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  /* border-radius: 50%; */
   outline: none;
 }
 @media (min-width: 768px) {
@@ -1232,9 +1275,10 @@ margin: 24px 0;
   flex-direction: column;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 40px;
+  padding-top: 80px;
   background-color: #fff;
   z-index: 999;
   transform: translateX(100%);
@@ -1247,8 +1291,6 @@ margin: 24px 0;
   position: absolute;
   top: 16px;
   right: 16px;
-  margin-top: 24px;
-  margin-right: 24px;
 }
 .mobile-menu{
   margin-bottom: auto;
@@ -1256,7 +1298,6 @@ margin: 24px 0;
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  margin-top: 32px;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
@@ -1284,4 +1325,8 @@ margin: 24px 0;
   font-weight: 500;
   line-height: 24px; /* 120% */
   letter-spacing: 0.4px;
+}
+.socials-footer-burger{
+  display: flex;
+  gap: 56px;
 }
