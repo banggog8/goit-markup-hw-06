@@ -257,7 +257,7 @@ button {
   color: var(--hover-link);
 }
 .address {
-  /* font-style: normal; */
+  margin-left: auto;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -282,7 +282,7 @@ margin: 24px 0;
     flex-direction: row;
     align-items: baseline;
     gap: 40px;
-    margin-left: 332px;
+    margin-left: auto;
   }
 }
 .contacts-info {
@@ -1328,5 +1328,11 @@ margin: 24px 0;
 }
 .socials-footer-burger{
   display: flex;
-  gap: 56px;
+  justify-content: space-between; 
+}
+@media only screen and (min-width: 428px) {
+  .socials-footer-burger {
+    gap: 56px;
+    justify-content: center;
+  }
 }

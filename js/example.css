@@ -24,6 +24,7 @@ body{
 .container{
     width: 1200px;
     margin: 0 auto;
+    background-color: orange;
 }
 .btn{
     display: inline-block;
@@ -42,6 +43,14 @@ body{
     background-color: green;
     vertical-align: middle;
 }
-
+.container1{
+   
+    width: 1440px;
+    margin: 0 auto;
+    outline: 2px solid green ;
+}
+.page{
+    background-color: firebrick;
+}
 
 
